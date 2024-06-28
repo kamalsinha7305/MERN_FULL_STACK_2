@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+    body{
+      
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+      .conatiner{
+  
+      margin-top: 18%;
+     display: inline-block;
+     padding: 15px;
+        border: 2px black solid;
+      }
+
+ </style>
+</head>
+<body>
+    
+<div class="conatiner">
+    <p>Name: <input type="text" id="text" > <span style="color: red;" id="te"></span> </p>
+    <p>Email: <input type="email" id="email"> <span style="color: red;" id="tea"></span> </p>
+    <p>Website: <input type="url" id="url"> <span style="color: red;" id="team"></span></p>
+    <p>Message: <input type="" id="mess"><span style="color: red;" id="teams"></span></p>
+    <button onclick="c()">Sumit</button>
+
+</div>
+</body>
+
+
+<script>
+function c(){
+var emailInput = document.getElementById('email').value ;
+var textInput = document.getElementById('text').value ;
+var urlInput = document.getElementById('url').value ;
+var MesInput = document.getElementById('mess').value ;
+
+var one =document.getElementById('te');
+var two =document.getElementById('tea');
+var three =document.getElementById('team');
+
+var four=document.getElementById('teams');
+
+
+if (emailInput=='' ){
+console.log('this field is required');
+two.innerText=`*This field  is required`;
+}
+
+if (textInput=='' ){
+console.log('this field is required');
+one.innerText=`*This field  is required`;
+}
+
+
+if (urlInput=='' ){
+console.log('this field is required');
+three.innerText=`*This field  is required`;
+}
+
+
+if (MesInput=='' ){
+console.log('this field is required');
+four.innerText=`*This field  is required`;
+}
+}
+
+</script>
+</html>

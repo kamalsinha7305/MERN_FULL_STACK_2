@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Task-7</title>
+  
+    <style>
+     
+        h1,div{
+            text-align: center;
+        }
+        h1{
+            color: rgb(2, 2, 109);
+            
+        }
+        img{
+            padding-top: 100px;
+            animation: move 4s linear infinite ;
+            animation-play-state: paused;
+        }
+        @keyframes move{
+            0% {margin-left: 100%;}
+            100% {margin-left: 0%;}
+        }
+
+    </style>
+</head>
+<body>
+  
+    <img id="train" src="train.png" alt="train" height="200px">
+    <div style="width: 100%;height: 5px;"></div>
+    <h1>CLICK THE FOLLOWING BUTTON TO HANDLE THE ANIMATION </h1>
+    <div>
+        <button onclick="start()">START</button>
+        <button onclick="stop()">STOP</button>
+    </div>
+
+
+    <script>
+        function start(){
+           var on= document.getElementById("train");
+           on.style.animationPlayState = "running";
+        }
+        function stop(){
+            var off=document.getElementById("train");
+            off.style.animationPlayState="paused";
+        }
+    </script>
+</body>
+</html>

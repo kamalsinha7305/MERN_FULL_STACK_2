@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSTASK 1</title>
+
+
+    <style>
+
+      body{
+      
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+      .conatiner{
+
+      margin-top: 18%;
+  display: inline-block;
+ padding: 15px;
+        border: 2px black solid;
+        
+
+
+      }
+    </style>
+</head>
+<body>
+    
+  <div class="conatiner">
+    <H3>Enter the number </H3>
+    <input type="text" value="" id="box">
+    <button onclick="happen()" ><b>Enter</b></button>
+    <h3 id="output"></h3>
+  </div>
+    <script>
+
+
+    function reverseNumber(n) {
+  let reversed = 0;
+  while (n > 0) {
+    let remainder = n % 10;
+    reversed = reversed * 10 + remainder;
+    n = Math.floor(n / 10);
+  }
+  return reversed;
+}
+
+function happen() {
+let inputnuber=document.getElementById("box").value;
+
+let ans =reverseNumber(inputnuber);
+
+
+let outputElement = document.getElementById("output");
+
+outputElement.innerText = `The answer is : ${ans}`;
+}
+
+
+
+    </script>
+</body>
+</html>

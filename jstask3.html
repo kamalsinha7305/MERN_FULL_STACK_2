@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+
+body{
+      
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .conatiner{
+
+    margin-top: 18%;
+   display: inline-block;
+   padding: 15px;
+      border: 2px black solid;
+    }
+    </style>
+</head>
+<body>
+    <div class="conatiner">
+  <p>1st Number : <input type="number" id="num1"></p>
+  <p>2nd Number : <input type="number" id="num2"></p>
+ 
+   <div>
+    <button onclick="multiply()" id="mul">Multiply</button>
+    <button onclick="divide()" id="div">Divide</button>
+   </div>
+
+   <h3 id="output"> </h3>
+
+  </div>
+ <script>
+  
+   
+ 
+   function multiply(){
+    
+    const n1=document.getElementById("num1").value;
+   const n2=document.getElementById("num2").value;
+
+    let numul=n1*n2;
+    console.log(numul); 
+    
+let outputElement = document.getElementById("output");
+
+outputElement.innerText = `The result is: ${numul}`;
+
+   }
+   
+   function divide(){
+    const n1=document.getElementById("num1").value;
+   const n2=document.getElementById("num2").value;
+   
+    let nudiv=n1/n2;
+    console.log(nudiv); 
+    
+let outputElement = document.getElementById("output");
+
+outputElement.innerText = `The result is: ${nudiv}`;
+   }
+     
+   
+ </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+      
+body{
+      
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .conatiner{
+
+    margin-top: 15%;
+   display: inline-block;
+   padding: 15px;
+      border: 2px black solid;
+    }
+    </style>
+</head>
+<body>
+    
+  <div class="conatiner">
+  <button onclick="date()" ><b>show date</b> </button>
+<h3 id="out1"></h3>
+
+
+  <button onclick="time()"> <b>show time</b></button>
+<h3 id="out2"></h3>
+</div>
+
+<script>
+const da= new Date();
+
+ function date(){
+    
+let ans =da.toLocaleDateString();
+    
+  let dat =document.getElementById("out1");
+  dat.innerText=`You entered: ${ans}`; 
+
+  
+ }
+
+ function time(){
+    let ans = da.toString();
+    let tim =document.getElementById("out2");
+    tim.innerText=`You entered: ${ans}`;
+ }
+    </script>
+</body>
+</html>
